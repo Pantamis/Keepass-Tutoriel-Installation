@@ -31,7 +31,9 @@ une traduction française est diponible ici : https://keepass.info/translations.
 
 * Vous trouverez des informations pour :
     * Installer Keepass
-    * Installer le plugin Kee pour Firefox
+    * Installer le plugin Kee pour Firefox et comment l'utiliser
     * Créer une base de donnée sur votre serveur personnel en SAMBA (partage Windows)
     * La synchroniser avec les changements réalisé sur votre ordinateur en local
+    * Un script pour importer les mots de passe Firefox et les intégrer à Keepass
+
 
