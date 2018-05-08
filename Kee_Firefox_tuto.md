@@ -17,7 +17,7 @@ https://support.mozilla.org/fr/questions/1077630#answer-834769
 
 
 Utiliser le script : 
-`
+```
 /* export the names and passwords in JSON format to firefox-logins.json */
 var tokendb = Cc["@mozilla.org/security/pk11tokendb;1"].createInstance(Ci.nsIPK11TokenDB);
 var token = tokendb.getInternalKeyToken();
@@ -49,4 +49,4 @@ if (!token.needsLogin() || token.isLoggedIn()) {
  converter.close();
 }})
 }}
-`
+```
