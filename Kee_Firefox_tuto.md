@@ -1,4 +1,4 @@
-# Le Plugin Kee pour le naviagateur Firefox
+# Le Plugin Kee pour le navigateur Firefox
 
 KeePass2 n'est pas intégrer au navigateur web mais il est intégrable. Je traîte ici le cas de Firefox.
 
@@ -15,13 +15,13 @@ Il faut ensuite déplacer le plugin KeePassRPC.plgx dans le répertoire Plugins 
 
 Sur Firefox vous devez installer l'addon Kee qui se trouve ici : https://addons.mozilla.org/fr/firefox/addon/keefox/
 
-La base de donnée qui contient vos mot de passe doit être ouverte sur le logiciel KeePass pour que Firefox puisse vous proposez de remplir les champs.
+La base de donnée qui contient vos mots de passe doit être ouverte sur le logiciel KeePass pour que Firefox puisse vous proposez de remplir les champs.
 
 ## 3. Pourquoi devrait-on l'installer ?
 
 Si vous désirez une sécurité maximale, vous ne devez pas avoir à copier-coller votre mot de passe car c'est une très grosse faille de sécurité :
 
-Si le système est vérolé, le virus (cheval de Troie classique) peut enregistrer toutes les opérations réalisé dans le presse-papier (zone de mémoire où le contenu mis en attente de collage est en attente). Cela signifit que votre mot de passe est vu en clair par le virus lorsque vous le copier !! Bien sur KeePass2 est prévoyant et ne laisse le mot de passe que temporairement dans le presse-papier le temps de le copier (12 seconde par défaut), mais vous sentez bien que c'est une faille. 
+Si le système est vérolé, le virus (cheval de Troie classique) peut enregistrer l'état de la mémoire dont le presse-papier (zone de mémoire où le contenu mis en attente de collage est en attente). Cela signifit que votre mot de passe est vu en clair par le virus tant que vous n'avez pas modifié le contenu du presse papier (cad fait un Copier) !! Bien sur KeePass2 est prévoyant et ne laisse le mot de passe que temporairement dans le presse-papier le temps de le copier (12 seconde par défaut), mais vous sentez bien que c'est une faille. 
 
 Conclusion : si désirez un maximum de protection (c'est le cas, vous lisez ce tutoriel), interdiction de copier-coller !
 
