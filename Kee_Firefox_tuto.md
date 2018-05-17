@@ -1,13 +1,13 @@
-# Le Plugin Kee pour le navigateur Firefox
+## Le Plugin Kee pour le navigateur Firefox
 
 KeePass2 n'est pas intégrer au navigateur web mais il est intégrable. Je traîte ici le cas de Firefox.
 
-## 1. KeePass2 aussi flexible que les outils de mots de passe Firefox
+# 1. KeePass2 aussi flexible que les outils de mots de passe Firefox
 
 Kee est disponible sur le site https://www.kee.pm/ avec quelque tutoriel sur la page https://tutorial-addon.kee.pm/.
 Kee permet à Firefox de communiquer avec KeePass2 pour vous éviter de devoir taper les mots de passe.
 
-## 2. Installation et liaison Firefox
+# 2. Installation et liaison Firefox
 
 Quelque soit l'OS, vous devez télécharger le plugin KeePassRPC.plgx à la page https://github.com/kee-org/keepassrpc/releases/ 
 
@@ -17,7 +17,7 @@ Sur Firefox vous devez installer l'addon Kee qui se trouve ici : https://addons.
 
 La base de donnée qui contient vos mots de passe doit être ouverte sur le logiciel KeePass pour que Firefox puisse vous proposez de remplir les champs.
 
-## 3. Pourquoi devrait-on l'installer ?
+# 3. Pourquoi l'installer ?
 
 Si vous désirez une sécurité maximale, vous ne devez pas avoir à copier-coller votre mot de passe car c'est une très grosse faille de sécurité :
 
@@ -31,8 +31,19 @@ Remarque : Naturellement, lorsque KeePass ouvre une base de donnée, il faut la 
 
 Avertissement : Une telle fonctionnalité est assurément pratique mais introduit une faille, un plugin firefox malveillant spécifiquement créé peut recupérer les mots de passe transmit par KeePassRPC. De manière général, un logiciel malveillant spécifiquement créé pour compromettre KeePass y parviendra toujours dés lors qu'il est installé sur votre ordinateur.
 
+# 4. En pratique
 
-## Importer mot de passe Firefox
+Lorsque la base de données est ouverte dans KeePass2, Firefox demande à la base de données via le plugin si l'adresse URL de la page consultée est en adhéquation avec une adresse URL dans celle-ci. 
+
+Si une seule adresse correspond, Kee remplira automatiquement les champs du formulaire de connection au site. 
+Si plusieurs adresses correspondent, l'icône de Kee apparaîtra dans les champs à remplir et vous pourrez choisir l'entrée de votre choix parmis celles qui correspondent.
+
+Kee vous indiquera toujours si des entrées correspondent à l'adresse URL dans l'option "Entrée correspondantes" dans le menu de Kee (accessible en cliquant sur le bouton Kee dans la barre Firefox).
+
+# 5. Changer ses mots de passe
+
+
+# Importer mot de passe Firefox
 
 Pour extraire en JSON voir la page :
 
