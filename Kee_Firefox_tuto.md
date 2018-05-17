@@ -9,7 +9,7 @@ Kee permet à Firefox de communiquer avec KeePass2 pour vous éviter de devoir t
 
 ## 2. Installation et liaison Firefox
 
-Quelque soit l'OS, vous devez tlécharger le plugin KeePassRPC.plgx à la page https://github.com/kee-org/keepassrpc/releases/ 
+Quelque soit l'OS, vous devez télécharger le plugin KeePassRPC.plgx à la page https://github.com/kee-org/keepassrpc/releases/ 
 
 Il faut ensuite déplacer le plugin KeePassRPC.plgx dans le répertoire Plugins dans le répertoire d'installation.
 
@@ -25,7 +25,11 @@ Si le système est vérolé, le virus (cheval de Troie classique) peut enregistr
 
 Conclusion : si désirez un maximum de protection (c'est le cas, vous lisez ce tutoriel), interdiction de copier-coller !
 
-Le plugin KeePassRPC permet une connection chiffré entre KeePass et d'autres applications (Firefox via Kee). Ainsi un logiciel tier (malveillant) ne peut pas écouter ce qu'échange KeePass et l'application
+Le plugin KeePassRPC permet une connection chiffrée entre KeePass et d'autres applications (Firefox via Kee). Ainsi un logiciel tier (malveillant) ne peut pas écouter ce qu'échange KeePass et l'application.
+
+Remarque : Naturellement, lorsque KeePass ouvre une base de donnée, il faut la conserver en mémoire, mais KeePass chiffre certains champs dans la mémoire (mot de passe notamment, et champs additionnels pour lesquels l'option est activée dans le menu Avancé de l'entrée). Un logiciel malveillant générique copiant la mémoire vive ne peut pas en lire le contenu.
+
+Avertissement : Une telle fonctionnalité est assurément pratique mais introduit une faille, un plugin firefox malveillant spécifiquement créé peut recupérer les mots de passe transmit par KeePassRPC. De manière général, un logiciel malveillant spécifiquement créé pour compromettre KeePass y parviendra toujours dés lors qu'il est installé sur votre ordinateur.
 
 
 ## Importer mot de passe Firefox
