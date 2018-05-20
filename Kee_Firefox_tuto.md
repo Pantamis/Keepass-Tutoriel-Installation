@@ -36,21 +36,65 @@ Avertissement : Une telle fonctionnalité est assurément pratique mais introdui
 Lorsque la base de données est ouverte dans KeePass2, Firefox demande à la base de données via le plugin si l'adresse URL de la page consultée est en adhéquation avec une adresse URL dans celle-ci. 
 
 Si une seule adresse correspond, Kee remplira automatiquement les champs du formulaire de connection au site. 
-Si plusieurs adresses correspondent, l'icône de Kee apparaîtra dans les champs à remplir et vous pourrez choisir l'entrée de votre choix parmis celles qui correspondent.
+Si plusieurs adresses correspondent, l'icône de Kee apparaîtra dans les champs à remplir et vous pourrez choisir l'entrée de votre choix parmis celles qui correspondent en cliquant dessus.
 
-Kee vous indiquera toujours si des entrées correspondent à l'adresse URL dans l'option "Entrée correspondantes" dans le menu de Kee (accessible en cliquant sur le bouton Kee dans la barre Firefox).
+Kee vous indiquera dés lors qu'il y a des champs à remplir sur le site si des entrées correspondent à l'adresse URL dans l'option "Entrée correspondantes" du menu de Kee (accessible en cliquant sur le bouton Kee dans la barre Firefox ou par clic-droit). Depuis ce menu vous pourrez copier le nom d'utilisateur ou le mot de passe en cliquant sur le menu à trois traits à côté de l'entrée pertinente.
 
-# 5. Changer ses mots de passe
+# 5. Changer ses mots de passe pour des mots de passe aléatoires
+
+KeePass dispose d'un générateur de mots de passe aléatoires. Les mots de passe générés aléatoirement sont de TRÈS LOIN les PLUS FORTS, et pour cause le fait d'être généré de cette façon à pour conséquence que :
+
+    * Même si par inadvertence ils s'afficheraient en clair temporairement (comme sur les smartphones par un copier-coller) une personne qui regarderait l'écran aurait une (très) grande difficulté à les lire et donc les mémoriser
+    * Ils imposent aux potentiels hackeurs de vous attaquer par pure brute-force, aucune technique de dictionnaire ou social engeneering ne permet d'éventuellement gagner du temps. Celà à pour conséquence que :
+    * Ils seront forcément les derniers mots de passe essayés par un éventuel hackeur tenace, ils sont donc les PLUS FORT DE TOUS. A ce niveau là, si vos mots de passe sont assez longs, ce n'est plus un individu qui attaque vos mots de passe mais une organisation (entreprise ou État...)
+    * Ils évitent de tomber dans l'usage le plus déconseilé des mots de passe : la réutilisation. La réutilisation d'un mot de passe ou de variantes de celui-ci sur plusieurs sites rendent tous ces mots de passe faibles dés lors que deux sites sur lesquelles vous êtes inscrit ont vu leurs identifiants et mots de passe fuiter (on peut alors identifier les éléments communs à ses mots de passes et la façon de créer les variantes). Les mots de passe généré aléatoirement ne sont PAS REPRODUCTIBLES, chaque site à un mot de passe très différent, risque 0.
+    * Vous vous dépendez en revanche de KeePass pour retrouver vos mots de passe (n'espérez pas retrouver de tête des mots de passe que vous n'avez pas choisi et que vous ne saisirez jamais). Il faudra donc créer dupliquer et synchroniser les fichiers de base de données cryptée pour disposer de sauvegardes accessible partout tant que vos mots de passe sont générés ainsi (remarquez que c'est peut être déjà le cas alors que vos mots de passe sont faibles...)
+    
+A vous de mesurer avantages et inconvenients. La réutilisation de mots de passe est en tout cas très fortement déconseillée comme le décrit : https://xkcd.com/792/
+
+KeePass vous propose quelques profils de génération de mots de passe aléatoires mais il est bon de créer les vôtres. Pour celà, rendez vous dans le générateur de mots de passe dans KeePass (outils, générer un nouveau mot de passe).
+Choisissez le nombre de charactères, les différents types (maj, min, chiffres, paranthèses, espace ....) et cliquer sur la disquette pour enregistrer en donnant un nom clair à ce profil de mot de passe.
+
+Dans Kee, il suffira de cliquer sur l'option "Générer un nouveau mot de passe" (ou par clic-droit et Kee dans le menu contextuel) et choisir le profil de mot de passe désiré pour que le mot de passe soit enregistré dans le presse papier.
+
+En pratique :
+   * Une fois connecté au compte sur le site, on demande le changement du mot de passe
+   * Kee ne parvient pas toujours à réécrire l'ancien mot de passe dans les champs "retaper votre mot de passe actuel". Il faut donc en général copier depuis Kee le mot de passe en cliquant sur "Entrées correspondantes" dans le menu Kee puis copier le mot de passe de l'entrée pertinente en cliquant sur le bouton dans le menu à trois bar à côté de cette entrée.
+   * Cliquer sur "Générer un nouveau mot de passe" dans Kee, cliquer sur le profil de mot de passe desiré.
+   * Puis coller (Ctrl + V) dans tous les champs demandant le nouveau mot de passe et sa confirmation
+   * Une fois que le site valide votre changement de mot de passe, on clique sur "Sauvegarder le dernier identfiant" puis "modifier une entrée existante" et on clique sur l'entrée qui contenait le mot de passe. On clique sur "Mettre à jour".
+   * Vous avez donc changé votre mot de passe sur le site et dans la base de donnée KeePass. Vérifiez cependant que KeePass a changé correctement les bons champs (par défaut le dernier champs remplit est le nouveau mot de passe mais certains sites demandent des captchas ce qui embrouille Kee qui ne communique pas les champs pertinants).
+
+# 6 J'ai oublié de mettre à jour la base de donnée et le mdp généré n'est plus dans le presse papier, que faire ?
+
+Pas de panique, votre mot de passe n'est pas perdu ! Kee génère toujours un souvenir du mot de passe généré aléatoirement par la procédure précédente !
+
+Il suffit de chercher dans le dossier "Kee Generated Password Backup" une entrée dont l'URL est celle du site en question et qui est la dernière modifiée ! Elle contiendra cette URL et uniquement le mot de passe généré ! (Aucune possibilité d'embrouille sur ce coup là, mais cette entré est incomplète car il manque le login)
+
+Vous pourrez donc modifier manuellement depuis KeePass l'entrée utilisée par Kee pour vous connecter au dit site pour y mettre le bon mot de passe et login. Vous devriez pouvoir vous reconnecter normalement avec Kee.
+
+Remarque : lorsque vous êtes sur que les entrées que vous utilisez contiennent bien les mots de passe à jour et vous permettent une connection normale, vous pouvez bien sur supprimer les entrées créées par Kee pour sauvegarder les mots de passe générés bien sûr.
 
 
-# Importer mot de passe Firefox
+# Importer les mot de passe de Firefox
 
-Pour extraire en JSON voir la page :
+Cetains addons permettent d'extraire les mots de passe firefox et de les sauvegarder dans un fichier XML. Ce fichier pourra être ensuite lu par KeePass pour importer tous vos mot de passe.
+
+Cependant celà ne marche pas toujours pour Linux. Si vous ne trouvez aucun moyen d'exporter vos mos de passe firefox vous pouvez suivre la procédure ci-dessous :
+
+Nous allons extraire en JSON vos mots de passe firefox comme à la page :
 
 https://support.mozilla.org/fr/questions/1077630#answer-834769
 
+Vous devez notamment ouvrir la console du navigateur Firefox. 
 
-Utiliser le script : 
+Vous devez débloquer les options dévelloppeur, pour celà taper `about:config` dans la barre d'adresse et valider que vous prenez le risque (Firefox vous previens que vous allez manipuler des paramètres avancés).
+
+Cherchez dans la barre de recherche la valeur `devtools.chrome.enable` et double cliquez sur la ligne pour passer la valeur sur `true`.
+
+La console du navigateur est maintenant accessible via `Ctrl + Maj + J` ou dans le menu Firefox -> Développement Web -> Console Navigateur.
+
+Maintenant copier-coller le script suivant dans la ligne d'entrée en bas de la console : 
 ```
 /* export the names and passwords in JSON format to firefox-logins.json */
 var tokendb = Cc["@mozilla.org/security/pk11tokendb;1"].createInstance(Ci.nsIPK11TokenDB);
@@ -84,3 +128,8 @@ if (!token.needsLogin() || token.isLoggedIn()) {
 }})
 }}
 ```
+Une fenêtre s'affiche alors avec une grande ligne de texte et le nombre de mots de passe trouvé. Validez, firefox vous proposera de télécharger le fichier `firefox-logins.json` qui contiendra tous vos mots de passe, identifiants ainsi que les URL associées.
+
+Il faut ensuite convertir le fichier JSON en CSV soit par Excel soit en utilisant des convertisseurs en ligne ou programmes (la bibliothèque Python pandas vous permet par exemple d'ouvrir un fichier JSON et de l'exporter en CSV, très pratique pour les ordinateur Linux).
+
+Il faut ensuite créer une base de données dans KeePass et selectionner "Importer" dans le fichier "Nouvelle" et choisir l'importe par CSV générique.
