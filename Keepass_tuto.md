@@ -67,12 +67,13 @@ Je ne recommande pas la méthode du fichier clé qui n'est pas un mot de passe (
 La base de donnée est un mini-systeme de fichier. Des répertoires ont déjà été crées par KeePass2 dans votre base de données. Clic droit dans la fenêtre principale, vous pouvez créer une entrée. Vous donnez un titre, un login, le mot de passe et l'URL du site qui le concerne. 
 
 Mais il est aussi possible de demander à générer aléatoirement le mot de passe !
-La petite clé vous propose de choisir un profil de mot de passe aléatoire. Vous pouvez en définir un nouveau (avec lettre, caractère spéciaux 20 caractères et sans parenthèses par exemple).
+La petite clé vous propose de choisir un profil de mot de passe aléatoire. KeePass vous propose quelques profils de génération de mots de passe aléatoires mais il est bon de créer les vôtres. Pour celà, rendez vous dans le générateur de mots de passe dans KeePass (outils, générer un nouveau mot de passe).
+Choisissez le nombre de charactères, les différents types (maj, min, chiffres, paranthèses, espace ....) et cliquer sur la disquette pour enregistrer en donnant un nom clair à ce profil de mot de passe.
 
-Vous pouvez ensuite le générer. Un mot de passe généré aléatoirement est par définition impossible à retenir mais il exploite toute la force combinatoire du chiffrements (c'est bien le dernier genre de chose qu'essaira le pirate voulant cracker le mots de passe maître). Mais pas de problème vous avez un gestionnaire de mot de passe !
+Vous pouvez ensuite le générer en appuyant sur la clé à côté du mot de passe quand vous éditer l'entrée KeePass. Un mot de passe généré aléatoirement est par définition impossible à retenir mais il exploite toute la force combinatoire du chiffrements (c'est bien le dernier type qu'essaira le pirate voulant cracker le mots de passe). Mais pas de problème vous avez un gestionnaire de mot de passe !
 
 Vous pouvez également ajouter une date d'expiration à votre entrée pour vous forcer à changer régulièrement vos mots de passe.
 
-/!\ Attention : il s'agit ici de changer les mot de passe enregistré dans le logiciel seulement, nous verrons dans Kee comment on peut changer les mots de passe sur les sites facilement ! Les options de génération décrites sont en fait rarement utile mais elles se combinent très bien avec Kee.
+/!\ Attention : il s'agit ici de changer les mot de passe enregistré dans le logiciel seulement, nous verrons dans Kee comment on peut changer les mots de passe sur les sites facilement ! Les options de génération décrites sont en fait rarement utile mais elles se combinent très bien avec Kee (voir le tuto dédié)
 
 Notez que la base de donnée est chargée en mémoire RAM quand elle est ouverte. Pour éviter un usage non-désiré par une autre personne qui peut acceder à l'ordinateur durant vos sessions, vous devez fermez la base de données pour forcer la saisie du mot de passe maître. N'oubliez pas de sauvegarder les changements éventuels ! (la base de données reste un fichier avant d'être un répertoire)
